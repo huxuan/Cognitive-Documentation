@@ -67,7 +67,7 @@ The subscription key can be obtained from the Marketplace page of your Azure man
 ## <a name="step3"></a> Step 3: Create the person group
 
 A person group named "MyPersonGroup" is create to save the persons.
-Note that we also enqueue the request time to `_timeStampQueue` to ensure the overall functionality.
+Note that we also enqueue the request time to `_timeStampQueue` to ensure the overall validation.
 
 ```CSharp
 const string personGroupId = "mypersongroupid";
@@ -94,7 +94,7 @@ Parallel.For(0, PersonCount, async i =>
 ## <a name="step5"></a> Step 5: Add faces to the persons
 
 Adding faces to different persons are processed concurrently, while it is recommended to add faces to one specific person sequentially.
-Again, `await WaitCallLimitPerSecond()` is invoked to ensure the reqeust frequency.
+Again, `await WaitCallLimitPerSecond()` is invoked to ensure the reqeust frequency is within the scope of limitation.
 
 ```CSharp
 Parallel.For(0, PersonCount, async i =>
@@ -118,7 +118,7 @@ Parallel.For(0, PersonCount, async i =>
 
 In this guide you have learned the process of creating a person group with massive number of persons and faces. Several reminders:
 
-- This strategy also applies to add faces to face lists, which is adviced to add face to different face lists concurrently, and same operation to one specific should be done sequentially.
+- This strategy also applies to add faces to face lists, which is adviced to add face to different face lists concurrently, and same operation to one specific face list should be done sequentially.
 - To keep the simplicity, the handling of potential exception is omitted in this guide. If you want to enhance more robustness, proper retry policy should be applied.
 
 The following are a quick reminder of the features previously explained and demonstrated:
