@@ -116,7 +116,12 @@ Parallel.For(0, PersonCount, async i =>
 
 ## <a name="summary"></a> Summary
 
-In this guide you have learned the process of creating a person group with massive number of persons and faces. A kind remind is that, this strategy also applies to add faces to face lists, it is adviced to add face to different face lists concurrently, and same operation to one specific should be done sequentially. The following are a quick reminder of the features previously explained and demonstrated:
+In this guide you have learned the process of creating a person group with massive number of persons and faces. Several reminders:
+
+- This strategy also applies to add faces to face lists, which is adviced to add face to different face lists concurrently, and same operation to one specific should be done sequentially.
+- To keep the simplicity, the handling of potential exception is omitted in this guide. If you want to enhance more robustness, proper retry policy should be applied.
+
+The following are a quick reminder of the features previously explained and demonstrated:
 
 - Creating person groups using the [Person Group - Create a Person Group](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) API
 - Creating persons using the [Person - Create a Person](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) API
