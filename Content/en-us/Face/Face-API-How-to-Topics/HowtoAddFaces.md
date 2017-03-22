@@ -22,16 +22,16 @@ This guide will demonstrate the best practice to add massive number of persons a
 Several variables are declared and a helper function is implemented to schedule the requests.
 
 - `PersonCount` is the toal number of persons.
-- `CallLimitPerSecond` is the maximum calls per second according to the subscription.
+- `CallLimitPerSecond` is the maximum calls per second according to the subscription tier.
 - `_timeStampQueue` is a Queue to record the request timestamps.
-- `await WaitCallLimitPerSecond()` will wait until it is valid to send next reqeust.
+- `await WaitCallLimitPerSecondAsync()` will wait until it is valid to send next reqeust.
 
 ```CSharp
 const int PersonCount = 10000;
 const int CallLimitPerSecond = 10;
 static Queue<DateTime> _timeStampQueue = new Queue<DateTime>(CallLimitPerSecond);
 
-static async Task WaitCallLimitPerSecond()
+static async Task WaitCallLimitPerSecondAsync()
 {
     Monitor.Enter(_timeStampQueue);
     try
@@ -78,13 +78,13 @@ await faceServiceClient.CreatePersonGroupAsync(personGroupId, personGroupName);
 
 ## <a name="step4"></a> Step 4: Create the persons to the person group
 
-Persons are created concurrently and `await WaitCallLimitPerSecond()` is also applied to avoid exceeding the call limit.
+Persons are created concurrently and `await WaitCallLimitPerSecondAsync()` is also applied to avoid exceeding the call limit.
 
 ```CSharp
 CreatePersonResult[] persons = new CreatePersonResult[PersonCount];
 Parallel.For(0, PersonCount, async i =>
 {
-    await WaitCallLimitPerSecond();
+    await WaitCallLimitPerSecondAsync();
 
     string personName = $"PersonName#{i}";
     persons[i] = await faceServiceClient.CreatePersonAsync(personGroupId, personName);
@@ -94,7 +94,7 @@ Parallel.For(0, PersonCount, async i =>
 ## <a name="step5"></a> Step 5: Add faces to the persons
 
 Adding faces to different persons are processed concurrently, while it is recommended to add faces to one specific person sequentially.
-Again, `await WaitCallLimitPerSecond()` is invoked to ensure the reqeust frequency is within the scope of limitation.
+Again, `await WaitCallLimitPerSecondAsync()` is invoked to ensure the reqeust frequency is within the scope of limitation.
 
 ```CSharp
 Parallel.For(0, PersonCount, async i =>
@@ -104,7 +104,7 @@ Parallel.For(0, PersonCount, async i =>
 
     foreach (string imagePath in Directory.GetFiles(personImageDir, "*.jpg"))
     {
-        await WaitCallLimitPerSecond();
+        await WaitCallLimitPerSecondAsync();
 
         using (Stream stream = File.OpenRead(imagePath))
         {
