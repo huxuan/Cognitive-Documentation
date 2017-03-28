@@ -15,7 +15,7 @@ This article pertains to Microsoft Face API Service version 1.0.
 
 * **Enhancement** Support 10K persons in a person group, [Face - Identify](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239) and [Face - Find Similar](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) are also supported for the scale.
 
-* **List Persons API** Pagination is supported in [Person - List Persons in a Person Group](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241) with extra optional `start` and `top` parameter.
+* **List Persons API** Pagination is supported in [Person - List Persons in a Person Group](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241) with extra optional parameters, `start` and `top`.
 
 * **Enhancement** Concurrency is supported in adding or deleting faces against different face lists or different persons in pserson group.
 
