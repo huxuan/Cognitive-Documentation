@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Knowledge Exploration
 LinkLabel: Query Expression Syntax
 Url: Academic-Knowledge-API/documentation/KnowledgeExploration/QueryExpressionSyntax
-Weight: 960
+Weight: 720
 -->
 
 # Query Expression Syntax
