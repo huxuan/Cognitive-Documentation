@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Knowledge Exploration
 LinkLabel: CalcHistogram Method
 Url: Academic-Knowledge-API/documentation/KnowledgeExploration/CalcHistogramMethod
-Weight:970
+Weight:730
 -->
 
 # CalcHistogram Method

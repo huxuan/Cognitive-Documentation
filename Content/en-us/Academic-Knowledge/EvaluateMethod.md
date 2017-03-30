@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Knowledge Exploration
 LinkLabel: Evaluate Method
 Url: Academic-Knowledge-API/documentation/KnowledgeExploration/EvaluateMethod
-Weight: 980
+Weight: 740
 -->
 
 # Evaluate Method

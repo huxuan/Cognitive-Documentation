@@ -2,7 +2,7 @@
 NavPath: Academic Knowledge API/Knowledge Exploration/Entity Attributes
 LinkLabel: Common Entity Attributes
 Url: Academic-Knowledge-API/documentation/KnowledgeExploration/EntityAttributes/CommonEntityAttributes
-Weight: 700
+Weight: 695
 -->
 
 #Entity Attributes
