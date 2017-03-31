@@ -32,7 +32,7 @@ J.JId	|Journal ID											|Int64		|Equals
 C.CN	|Conference series name								|String		|Equals,<br/>StartsWith
 C.CId	|Conference series ID								|Int64		|Equals
 RId	    |Referenced papers' ID								|Int64[]	|Equals
-W       |Words from paper title and Abstract 				|String[] 	|Equals
+W       |Words from paper 									|String[] 	|Equals
 E		|Extended metadata (see table below) 				|String 	|none  
 		
 
