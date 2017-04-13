@@ -1,18 +1,10 @@
-Microsoft Cognitive Services Documentation
+Microsoft Cognitive Services Documentation has moved
 ====================================
-This repo contains the documentaiton for [Microsoft Cognitive Services](<https://www.microsoft.com/cognitive-services>), which includes the former Project Oxford APIs. You can also check out our [SDKs & Samples on our website](<https://www.microsoft.com/cognitive-services/en-us/SDK-Sample>).
 
-**Don't see what you're looking for?** We're working on expanding our offerings and would love to hear from you what APIs, docs, SDKs, and samples you want to see next. Let us know on the [Cognitive Services UserVoice Forum](<https://cognitive.uservoice.com>).
+- If you work from Microsoft and you wanted to update the Cognitive Services documentation, please submit your changes by visiting the private Azure documentation repository at https://github.com/Microsoft/azure-docs-pr/tree/master/articles/cognitive-services.
 
+- Community contributions to the Cognitive Services documentation can be made via the public Azure documentation repository at https://github.com/Microsoft/azure-docs/tree/master/articles/cognitive-services.
 
-Contributing
-============
-We welcome contributions and are always looking for new SDKs, input, and suggestions. Feel free to file issues on the repo and we'll address them as we can or take matters into your hand and submit a pull request with your changes.
-
-For questions, feedback, or suggestions about Microsoft Cognitive Services, reach out to us directly on our [Cognitive Services UserVoice Forum](<https://cognitive.uservoice.com>).
-
-
-License
 =======
 All Microsoft Cognitive Services documentation is licensed with the MIT License. For more details, see [LICENSE](</LICENSE.md>).
 
